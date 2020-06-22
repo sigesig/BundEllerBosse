@@ -37,9 +37,9 @@ class _MainPageState extends State<MainPage> {
         // This trailing comma makes auto-formatting nicer for build methods.
         bottomNavigationBar: FancyBottomNavigation(
           tabs:[
-            TabData(iconData:Icons.gamepad, title: "Games"),
-            TabData(iconData: Icons.access_time, title: "Home"),
-            TabData(iconData: Icons.settings, title: "Settings")
+            TabData(iconData:Icons.gamepad, title: "Mange Bajer"),
+            TabData(iconData: Icons.access_time, title: "Bajer"),
+            TabData(iconData: Icons.settings, title: "Indstillinger")
           ],
           onTabChangedListener: (int position) {
             setState(() {
