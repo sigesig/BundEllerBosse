@@ -1,3 +1,4 @@
+import 'package:BundEllerBosse/Models/Games_Card.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'NavBarWidget/games_library_widget.dart';
@@ -28,7 +29,7 @@ class _MainPageState extends State<MainPage> {
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
           automaticallyImplyLeading: true,
-          title: Text("What is in my Kitchen"),
+          title: Text("Bund Eller Bøsse"),
         ),
         body: Stack(children: <Widget>[
           _children[_currentIndex],
@@ -51,4 +52,24 @@ class _MainPageState extends State<MainPage> {
         )
     );
   }
+}
+
+Widget BuildGamesLibraryWidget(){
+  return FutureBuilder(
+    future: ,
+    builder: (BuildContext context, AsyncSnapshot snapshot) {
+
+    },
+  );
+
+}
+
+Future<List<GameCard>> fetchPokemonsFromAPI() async {
+  final dataLocation =
+
+  // Get the JSON data from the response
+  final List<dynamic> data = json.decode(response.body);
+
+  // Convert JSON to Pokemons by using the named constructor fromJson
+  return data.map((json) => GameCard.fromJson(json)).toList();
 }
