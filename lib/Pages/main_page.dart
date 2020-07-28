@@ -1,6 +1,9 @@
-import 'package:BundEllerBosse/Models/Games_Card.dart';
+import 'dart:convert';
+
+import 'package:BundEllerBosse/Models/Games.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'NavBarWidget/games_library_widget.dart';
 import 'NavBarWidget/home_page_widget.dart';
 import 'NavBarWidget/settings_widget.dart';
@@ -13,6 +16,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+
   int _currentIndex = 1;
   final List<Widget> _children = [
     GamesLibraryWidget(),
@@ -54,22 +58,3 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-Widget BuildGamesLibraryWidget(){
-  return FutureBuilder(
-    future: ,
-    builder: (BuildContext context, AsyncSnapshot snapshot) {
-
-    },
-  );
-
-}
-
-Future<List<GameCard>> fetchPokemonsFromAPI() async {
-  final dataLocation =
-
-  // Get the JSON data from the response
-  final List<dynamic> data = json.decode(response.body);
-
-  // Convert JSON to Pokemons by using the named constructor fromJson
-  return data.map((json) => GameCard.fromJson(json)).toList();
-}

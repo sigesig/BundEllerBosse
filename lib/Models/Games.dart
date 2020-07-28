@@ -1,19 +1,23 @@
 import 'dart:collection';
 
-class GameCard {
+///This Model is used to get the JSON data
+class GamesModel {
  String gamename;
  String description;
  List<String> needed;
  String image;
+ List<String> tags;
 
-  GameCard(this.gamename,this.description,this.image,this.needed);
+
+  GamesModel(this.gamename,this.description,this.image,this.needed,this.tags);
   // Constructor used for conversion from JSON to Games.
-  factory GameCard.fromJson(Map<String, dynamic> json){
-    return GameCard(
+  factory GamesModel.fromJson(Map<String, dynamic> json){
+    return GamesModel(
       json['gamename'] as String,
       json['description'] as String,
       json['image'] as String,
       (json['needed'] as List)?.map((e) => e as String)?.toList(),
+      (json['tags'] as List)?.map((e) => e as String)?.toList(),
     );
   }
 }

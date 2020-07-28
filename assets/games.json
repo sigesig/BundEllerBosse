@@ -1,0 +1,15 @@
+[
+  {
+    "gamename": "test game",
+    "description": "This is the description of test game",
+    "needed": [
+      "balls 1",
+      "tests 2"
+    ],
+    "image": "none",
+    "tags": [
+      "test",
+      "game"
+    ]
+  }
+]
